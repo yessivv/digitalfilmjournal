@@ -1,7 +1,14 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+
 .header {
     font-size: 80px;
     font-weight: lighter;
     font-family: "Owners", sans-serif;
-    line-height: 80px;
-    padding: 10px 50px;
+  
 }
+
+
