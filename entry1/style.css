@@ -1,17 +1,31 @@
 *{
-    background-color: black;
-    color: rgb(169, 0, 0);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+
+
+}
+
+.text-container {
+    background-image: url(madigan-weapons3.png); 
+    background-position: center center; 
+    background-size: cover; 
+    min-height: 600px; 
+    padding: 20px; 
 
 }
 
 
-
-video {
-    display: block;
-    width: 800px;
-    margin: 0 auto;
-    padding-top: 10px;
+img {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: 100%;
 }
+
+
+
 
 .caption {
     display: flex;
@@ -29,44 +43,42 @@ h1{
     font-style: normal;
     padding-top: 0%;
     padding: 3;
-    
+    padding-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0); 
+    color: rgb(193, 0, 0);
+    padding: 10px;
     
 }
 
-em {
-    color: rgb(169, 0, 0);
-}
 
 
 
-p{
-    font-family: "p22-typewriter", sans-serif;
+
+p {
+font-family: "owners", sans-serif;
 font-weight: 400;
 font-style: normal;
-position: absolute;
-left: 300px;
-right: 300px;
-font-size: 15px;
-line-height: 22px;
-padding-bottom: 30px;;
-
+font-size: 25px;
+line-height: 30px;
+z-index: 1;
+padding: 25px;
 
 }
 
-h2{font-size: 20px;
-    font-family: "owners", sans-serif;
+h2{
+font-size: 100px;
+font-family: "owners", sans-serif;
 font-weight: 500;
 font-style: normal;
+position: absolute;
 padding-left: 2%;
-
-
+padding-bottom: 40px;
+background-color: rgba(0, 0, 0, 0); 
+    color: rgb(255, 255, 255);
+    padding: 10px;
 }
 
-video {
-    display: block;
-    margin: 0 auto;
-    padding-top: 10px;
-}
+
 
 
 .item-1{
@@ -93,8 +105,208 @@ video {
    
 }
 
-img {
-    display: block;
+.section-2 {
+    padding: 0px 15px;
+
+}
+
+
+.spin {
+    float: right;
+    width:500px;
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+
+
+.animated-text {
+  opacity: 0; 
+  animation: fadein 4s forwards; 
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+
+
+
+.script {
+font-size: 100px;
+font-family: "owners", sans-serif;
+font-weight: 500;
+font-style: normal;
+padding-left: 20px;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.box-card {
     width: 200px;
-    height: auto
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+
+.box-card:hover {
+    animation: rotate3d 8s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    backface-visibility: visible;
+    border-radius: 12px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+
+
+.face:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+
+
+.front {
+    transform: translateZ(100px);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+.right {
+    transform: translateX(100px) rotateY(90deg);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+.left {
+    transform: translateX(-100px) rotateY(-90deg);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+.top {
+    transform: translateY(-100px) rotateX(90deg);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+.bottom {
+    transform: translateY(100px) rotateX(-90deg);
+    border-color: #000000;
+    object-fit: cover;
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    25% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .box-card {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .front { transform: translateZ(75px); }
+    .back { transform: translateZ(-75px) rotateY(180deg); }
+    .right { transform: translateX(75px) rotateY(90deg); }
+    .left { transform: translateX(-75px) rotateY(-90deg); }
+    .top { transform: translateY(-75px) rotateX(90deg); }
+    .bottom { transform: translateY(75px) rotateX(-90deg); }
+}
+
+img {
+    object-fit: cover;
+    padding-bottom: 140px;
+}
+
+h3 {
+    font-size: 100px;
+    font-family: "owners", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0px 20px;
+}
+
+.loud {
+    font-size: 150px;
+    font-weight: light;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    
+    animation: color-shift 2s infinite alternate;
+}
+
+@keyframes color-shift {
+    0% { color: red; } 
+    100% {color: white; }
+     
+    
+}
+
+.txt3 {
+    padding: 15px;
 }

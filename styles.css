@@ -1,20 +1,93 @@
 * {
-    background-color: black;
-    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
 }
 
 
+
 .header {
-    font-size: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-right: 60px;
+   
+    
+}
+
+.info {
+    font-size: 100px;
     font-weight: lighter;
     font-family: "Owners", sans-serif;
   
 }
 
-
-.block {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    color: black;
+.moreinfo {
+    text-align: right;
+    font-family: "Owners", sans-serif;
+    font-size: 40px;
+    font-style: italic
 }
+
+.textgroup {
+    max-width: 1500px;
+    padding: 10px 50px
+}
+
+.descp {
+    font-family: "Owners", sans-serif;
+    font-size: 50px; 
+    line-height: 50px;
+    padding-bottom: 20px;
+    
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ticket {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    display: flex;
+    margin-bottom: 3px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
