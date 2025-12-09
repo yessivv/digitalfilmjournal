@@ -6,8 +6,44 @@
     max-width: max-content;
 }
 
+.backbutton {
+    position: relative;
+    left: 20px;
+    top: -25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 80%;
+   
+}
 
+.buttonimage img {
+position: relative;
+    top: 40px;
+    left: 15px;
+    width: 60px;
+    height: auto;
+}
 
+.buttonimage img:hover{
+    content: url(bw\ sim.png);
+}
+
+.animated-text {
+  opacity: 0; 
+  animation: fadein 4s forwards; 
+  padding-top: 20px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
 
 h1 {font-size: 15px;
    font-family: "owners", sans-serif;
@@ -188,7 +224,7 @@ h3 {
 }
 
 .collage {
-    width: 200px;
+    width: 50px;
     position: relative;
     left: 500px;
     bottom: 140px;
