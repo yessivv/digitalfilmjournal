@@ -6,6 +6,56 @@
     max-width: fit-content;
 }
 
+.backbutton {
+    position: relative;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 80%;
+   
+}
+
+.buttonimage img {
+position: relative;
+    top: 40px;
+    left: 15px;
+    width: 50px;
+    height: auto;
+}
+
+.buttonimage img:hover{
+    content: url(starbw2.png);
+}
+
+
+
+.back-btn {
+  background: transparent;
+  border: 0;
+}
+
+.back-btn:focus {
+  outline: none;
+}
+
+
+.animated-text {
+  opacity: 0; 
+  animation: fadein 4s forwards; 
+  padding: 20px 20px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
 .center {
   display: flex;
   float: left;
@@ -22,32 +72,21 @@ font-style: normal;
 padding: 15px 8px;
 }
 
-h2 {
-font-family: "gira-sans", sans-serif;
-font-weight: 100;
-font-size: 30px;
-font-style: normal;
-padding: 10px 50px;
-line-height: 50px;
-
-}
-
 p {
-    font-family: "p22-typewriter", sans-serif;
-font-weight: 400;
-font-style: normal;
-padding: 50px 50px;
-font-size: 15px;
-line-height: 22px;
+    font-size: 25px;
+font-weight: lighter;
+font-family: "Owners", sans-serif;
+line-height: 25px;
+padding: 30px;
+padding-top: 50px;
 }
-
 
 .emphasized {
     font-size: 80px;
     font-weight: lighter;
     font-family: "Owners", sans-serif;
     line-height: 80px;
-    padding: 10px 50px;
+
 }
 
 
@@ -71,7 +110,17 @@ h3 {
     font-weight: lighter;
     font-family: "Owners", sans-serif;
     line-height: 80px;
-    padding: 10px 50px;
+  
+}
+
+h4 {
+    font-size: 80px;
+    font-weight: lighter;
+    font-family: "Owners", sans-serif;
+    line-height: 80px;
+    position: absolute;
+    top: 860px;
+    left: 20px;
 }
 
 .wrapper {
